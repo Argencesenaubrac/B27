@@ -31,43 +31,27 @@ body {
 /* Carte */
 .card {
     background: white;
+    padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    overflow: hidden;
-    padding: 0 25px 25px;
 }
 
-/* IMAGE IMMERSIVE */
-.image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 20px 20px 0 0;
-}
-
+/* 👤 Personnage randonneur */
 .randonneur {
-    width: 100%;
-    height: 100%;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
+    border-radius: 50%;
+    margin: 10px auto 20px;
     display: block;
-    transform: scale(1.05);
+    border: 4px solid #eaf4f4;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: white;
 }
 
-/* voile pour lisibilité */
-.image-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.05),
-        rgba(0,0,0,0.25)
-    );
-}
-
-/* Histoire */
+/* Story */
 .story {
-    margin-top: 20px;
+    margin: 10px 0 20px;
     font-style: italic;
     line-height: 1.5;
     color: #3a4a5a;
@@ -76,7 +60,7 @@ body {
 /* Titre */
 h1 {
     font-size: 20px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 /* Boutons */
@@ -123,13 +107,9 @@ h1 {
 <div class="container">
     <div class="card">
 
-        <!-- IMAGE -->
-        <div class="image-wrapper">
-            <img src="randonneur.png" class="randonneur">
-            <div class="image-overlay"></div>
-        </div>
+        <!-- 👤 PERSONNAGE -->
+        <img src="randonneur.png" class="randonneur">
 
-        <!-- TEXTE -->
         <p class="story">
             Les chemins sont nombreux, et chacun d'eux raconte une histoire…
             Certains mènent aux burons, d’autres aux rivières…
@@ -137,12 +117,10 @@ h1 {
 
         <h1>Lis-le bien et dis-moi : comment s’appelle ce sentier ?</h1>
 
-        <!-- CHOIX -->
         <button class="choice" data-correct="false">Rando Aubrac</button>
         <button class="choice" data-correct="false">Aubrac évasion</button>
         <button class="choice" data-correct="true">Les fagous</button>
 
-        <!-- MESSAGES -->
         <div id="success" class="success">
             ✅ Tu as trouvé le bon chemin !!<br><br>
             Le sentier des Fagous tire son nom des hêtres (appelés “fayards” ou “fagous”), très présents ici.
